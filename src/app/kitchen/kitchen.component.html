@@ -1,0 +1,25 @@
+<p>Kitchen component</p>
+
+<form (ngSubmit)="onSubmit()">
+  <fieldset>
+    <label for="cookieQuantity"></label>
+    <input
+      id="cookieQuantity"
+      type="number"
+      name="cookieQuantity"
+      [(ngModel)]="cookieQuantity"
+    />
+  </fieldset>
+  <fieldset>
+    <label for="withNuts"></label>
+    <input
+      id="withNuts"
+      type="checkbox"
+      name="withNuts"
+      [(ngModel)]="withNuts"
+    />
+  </fieldset>
+  <button type="submit">Valider</button>
+</form>
+
+<app-magic-oven [nbCookies]="cookieQuantity"  [withNuts]="withNuts" ></app-magic-oven>
